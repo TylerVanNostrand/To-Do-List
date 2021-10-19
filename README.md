@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+My React To Do List Project
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
