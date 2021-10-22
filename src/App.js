@@ -92,7 +92,7 @@ class App extends React.Component {
       <div className="App container" >
         <div className="card-body text-center">
           <blockquote className="blockquote mb-0 mt-5 p-2" />
-          <p>To-Do List</p>
+          <h1>To-Do List</h1>
           <button type="button" onClick={() => this.setFilter('all')} className="btn btn-danger mx-3 mb-2">All Tasks</button>
           <button type="button" onClick={() => this.setFilter('active')} className="btn btn-danger mx-3 mb-2">Active Tasks</button>
           <button type="button" onClick={() => this.setFilter('completed')} className="btn btn-danger mx-3 mb-2">Completed Tasks</button>
@@ -103,14 +103,12 @@ class App extends React.Component {
             </div>
           </div>
         </div>
-
         <form onSubmit={this.handleSubmit}>
           <div className="input-group">
             <input type="text" value={this.state.newChore} onChange={this.handleChange} className="form-control" placeholder="What do you need to do?" aria-label="Recipient's username" aria-describedby="button-addon2" />
             <button className="btn btn-danger" type="button" onClick={this.handleSubmit} value="Submit" id="button-addon2">Submit</button>
           </div>
         </form>
-
         { this.state.taskList.filter(filterHelper).map((item, index) => <Todo key={index} chore={item} handleRemove={this.handleRemove} handleComplete={this.handleComplete} />)}
       </div>
     );
